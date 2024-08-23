@@ -2,60 +2,209 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-
-font-family: "Bebas Neue", sans-serif;
-font-weight: 400;
-font-style: normal;
-
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .container {
-    max-width: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
+
 header{
-    background-color: #222226;
-    width: 100%;
-    padding: 2;
-    box-shadow: 10px 05px 30px;
+  background-color: #222226;
+  width: 100%;
+  padding: 2;
+  box-shadow: 10px 05px 30px;
 }
 
-.menu{
-    width: 50%;
+.menu {
+  width: 50%;
 }
 
-.menu nav a{
+.menu nav a {
+  color: aliceblue;
+  text-decoration: none;
+  padding-right: 20px;
+  font-size: 20px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
 
-    color: aliceblue;
-
-    text-decoration: none;
-    padding-right: 20px;
-    font-size: 20px;
-
+.menu nav a:hover {
+  color: #ff0036 ;
+  transform: scale(1.1) translateY(-5px); /* Combina aumento e movimento para cima */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
-    width: 45%;
-    
-    }
-
-    body {
-background-image: url(fundo.png);
-background-repeat: no-repeat;
-background-size: cover;
-
-
-    }
-
-    .dilae {
-
-        width: 80%;
-       float: right;
+  width: 45%;
 }
+
+.landing-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Change this to space-between */
+    align-items: center;
+    background-image: url(fundo.png);
+    padding: 20px;
+  }
+  
+  .landing-page h1 {
+    font-size: 100px;
+    margin-bottom: 0; /* Remove the margin-bottom */
+    background-color: #222226d0;
+    border-radius: 20px;
+    padding: 15px;
+    color: #fff;
+  }
+  
+  .inscrever-button {
+    background-color: #ff0036;
+    color: #fff;
+    border: none;
+    padding: 50px 60px;
+    font-size: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .inscrever-button:hover {
+    background-color: #ff0066;
+  }
+  
+  .second-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff0036;
+    color: #fff;
+    padding: 20px;
+    flex-direction: column;
+  }
+  
+  .second-page h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  #texto1 {
+    padding: 20px;
+  }
+
+  .slider {
+    margin: 10 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+    transition: margin 0.5s; /* Add transition effect */
+  }
+  
+  .slides input {
+    display: none;
+  }
+  
+  .slide {
+    width: 25%;
+    position: relative;
+  }
+  
+  .slide img {
+    width: 800px;
+ 
+  }
+  
+  .manual-navigation {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child) {
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover {
+    background-color: #fff;
+  }
+  
+  #radio1:checked ~ .first {
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first {
+    margin-left: -25%;
+  }
+  
+  #radio3:checked ~ .first {
+    margin-left: -50%;
+  }
+  
+  #radio4:checked ~ .first {
+    margin-left: -75%;
+  }
+  
+  .navigation-auto {
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navigation-auto div {
+    border: 2px solid #ff0066;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: #fff;
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: #fff;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: #fff;
+  }
+  
+  #radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: #fff;
+  }
+
+
 
